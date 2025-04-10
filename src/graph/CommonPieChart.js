@@ -17,12 +17,8 @@ function CommonPieChart({
     const data = [
         ['Status', 'Value'],
         [posValueText, Number(positive)],
-        [negValueText, Number(negative)],
+        [negValueText, Number(Math.abs(negative))],
     ];
-
-    // function convertValue(value) {
-    //     return value;
-    // }
 
     return (
         <Row>
@@ -41,7 +37,7 @@ function CommonPieChart({
                                 height: '100%',
                             }}
                         >
-                            <PuffLoader color="#FFFFFF" loading size={60} />
+                            <PuffLoader color="#00447A" loading size={60} />
                         </div>
                     }
                     data={data}
@@ -53,13 +49,13 @@ function CommonPieChart({
                             showColorCode: true,
                             backgroundColor: 'black',
                         },
-                        pieSliceBordercolor: '#227CBF',
+                        pieSliceBordercolor: '#3DCBF8',
                         slices: [
                             {
-                                color: '#00A68A',
+                                color: '#00447A',
                             },
                             {
-                                color: '#227CBF',
+                                color: '#3DCBF8',
                             },
                         ],
                         border: 'none',

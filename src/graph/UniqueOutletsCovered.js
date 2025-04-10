@@ -9,14 +9,7 @@ function UniqueOutletsCovered({ data }) {
         ['Unique Outlets', 'Covered', 'Uncovered'],
         ...data.map(({ from, covered, uncovered }) => [from, covered, uncovered]),
     ];
-    // const data = [
-    //     ['Unique Outlets', 'Covered', 'Uncovered'],
-    //     ['Chittagong', 612, 462],
-    //     ['Dhaka', 202, 235],
-    //     ['Khulna', 843, 82],
-    //     ['Rajshahi', 30, 54],
-    //     ['Sylhet', 398, 100],
-    // ];
+
     return (
         <div>
             {data.length > 0 && (
@@ -34,7 +27,7 @@ function UniqueOutletsCovered({ data }) {
                                 height: '100%',
                             }}
                         >
-                            <PuffLoader color="#03A28F" loading size={60} />
+                            <PuffLoader color="#00447A" loading size={60} />
                         </div>
                     }
                     data={data2}
@@ -56,12 +49,12 @@ function UniqueOutletsCovered({ data }) {
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                             },
-                            baselineColor: '#00A68A',
-                            gridlineColor: '#00A68A',
+                            baselineColor: '#00447A',
+                            gridlineColor: '#00447A',
                         },
                         isStacked: 'percent',
                         legend: 'none',
-                        colors: ['#00A68A', '#227CBF'],
+                        colors: ['#00447A', '#3DCBF8'],
                         tooltip: {
                             showColorCode: true,
                         },

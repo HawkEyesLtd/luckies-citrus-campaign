@@ -256,7 +256,7 @@ function Dashboard() {
 
                     {loading ? (
                         <div className="loader">
-                            <RingLoader color="#03A28F" loading={loading} size={180} />
+                            <RingLoader color="#00447A" loading={loading} size={180} />
                         </div>
                     ) : (
                         <>

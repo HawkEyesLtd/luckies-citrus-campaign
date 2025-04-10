@@ -17,7 +17,7 @@ function App() {
         <>
             {loading ? (
                 <div className="loading-content">
-                    <HashLoader color="#03A28F" loading={loading} size={150} />
+                    <HashLoader color="#00447A" loading={loading} size={150} />
                 </div>
             ) : (
                 <Dashboard />

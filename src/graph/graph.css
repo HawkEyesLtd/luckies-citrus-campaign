@@ -9,7 +9,7 @@
 }
 .rmsc {
     --rmsc-radius: 12px !important;
-    --rmsc-border: #03a28f !important;
+    --rmsc-border: #00b7f2 !important;
     /* --rmsc-focus: #f1f3f5 important; */
     /* --rmsc-main: #4285f4;
     --rmsc-hover: #f1f3f5;
@@ -20,15 +20,22 @@
     --rmsc-selected: #bdbcbc !important;
     --rmsc-h: 32px !important;
 }
-.rmsc .dropdown-container {
-    background-color: #03a28f !important;
+.rmsc.multiselect-input > .dropdown-container {
+    background-color: #00b7f2 !important;
+}
+.rmsc.multiselect-input > .dropdown-container > .dropdown-heading {
+    z-index: 55;
+}
+
+.rmsc.multiselect-input > .dropdown-container > .dropdown-content {
+    z-index: 100;
 }
 .dropdown-heading-value > span {
     color: #fff !important;
 }
 /* tooltip style */
 .custom-tooltip {
-    background: linear-gradient(90deg, #2e73b1 0%, #007e69 100%);
+    background: linear-gradient(90deg, #00447a 0%, #00b7f2 100%);
     color: #fff;
     padding: 8px 12px;
     border-radius: 10px;
@@ -83,7 +90,7 @@ text {
     margin-top: 5px;
 }
 .right-hr-positive {
-    background-color: #00a68a;
+    background-color: #00447a;
 }
 .right-hr-negative {
     margin-left: 15px;
@@ -120,7 +127,7 @@ text {
 
 /* line chart style */
 .progressTooltipContainer {
-    background: linear-gradient(90deg, #00a68a 0%, #294cca 100%);
+    background: linear-gradient(90deg, #00447a 0%, #294cca 100%);
     color: #fff;
     padding: 8px 12px;
     border-radius: 10px;
@@ -136,7 +143,7 @@ text {
 }
 .custom-button {
     width: 100%;
-    background: linear-gradient(107.2deg, #03a28f 10.6%, #089d97 91.1%);
+    background: #00b7f2;
     border: none;
     border-radius: 7px;
     color: #fff;
@@ -176,11 +183,11 @@ text {
 }
 .custom-input {
     border-radius: 15px;
-    border: 1px #674669 solid;
+    border: 1px #00b7f2 solid;
     padding: 4px 12px;
     background-color: transparent;
     height: 32px;
-    box-shadow: 0 0 2px #674669;
+    box-shadow: 0 0 2px #00b7f2;
     text-align: right;
     font-weight: 400;
     width: 100%;
@@ -189,8 +196,8 @@ text {
 
 .custom-input:focus {
     outline: none;
-    border: 1px solid #674669 !important;
-    box-shadow: 0 0 10px 2px #674669 !important;
+    border: 1px solid #3dcbf8 !important;
+    box-shadow: 0 0 10px 2px #00b7f2 !important;
 }
 .custom-input::placeholder {
     opacity: 1 !important;
@@ -208,7 +215,7 @@ text {
     color: #fff !important;
 }
 .rmsc.multiselect-input .dropdown-container:focus-within {
-    border: 1px solid #674669 !important; /* Change the border color */
+    border: 1px solid #00b7f2 !important; /* Change the border color */
     outline: none !important; /* Remove default blue outline */
 }
 .rmsc.multiselect-input .dropdown-container:focus-within {
