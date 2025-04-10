@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Trade Gothic";
-    src: url("./assets/font/trade-gothic.ttf") format("truetype");
+    src: url("./assets/font/Trade\ Gothic\ LT.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: "Trade Gothic";
-    src: url("./assets/font/trade-gothic-bold.ttf") format("truetype");
+    src: url("./assets/font/Trade\ Gothic\ LT\ Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
@@ -15,7 +15,7 @@ body {
     font-family: "Trade Gothic", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url("./assets/ui/5x/Background@5x.png");
+    /* background-image: url("./assets/ui/5x/Background@5x.png"); */
     background-repeat: no-repeat;
     background-position: top bottom;
     background-size: 100vw 100vh;

@@ -227,7 +227,7 @@ function Dashboard() {
     }
 
     return (
-        <>
+        <div className="dashboard-with-header-footer">
             <NavBar value={value} setValue={setValue} live={live} setTodaysData={setTodaysData} />
             <div className="dashboard-main-container">
                 <div
@@ -475,7 +475,7 @@ function Dashboard() {
                     <Footer />
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -1,17 +1,49 @@
-.dashboard-main-container {
-    /* background: #00219960; */
-    width: 85%;
-    margin: 0 auto;
-    border-radius: 2px;
-    /* background-image: url('../../assets/Background.jpg');
+.dashboard-with-header-footer {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.dashboard-with-header-footer::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/ui/SVG/Backround.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    height: 100%;
-    width: 100%; */
+    background-size: cover;
+    z-index: -1;
 }
+
+.dashboard-with-header-footer::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
+    z-index: -1;
+}
+
+.dashboard-main-container {
+    position: relative;
+    z-index: 1;
+}
+
+.main-container {
+    position: relative;
+    padding-top: 30px;
+    z-index: 1;
+}
+
 .ibox {
-    background: #4c5b8b72;
+    background: rgba(76, 91, 139, 0.85);
+    backdrop-filter: blur(5px);
     border: 1px solid #03a28f;
     box-sizing: border-box;
     -webkit-box-shadow: 10px 11px 5px -3px rgba(0, 0, 0, 0.24);
