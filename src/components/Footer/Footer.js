@@ -4,18 +4,29 @@ import React from 'react';
 function Footer() {
     return (
         <div style={{ padding: '0 0 30px 0' }}>
-            <p style={{ color: '#ffff', textAlign: 'right' }}>
-                *For deeper insights, please visit this link "
-                <a
-                    target="_blank"
-                    href="https://bat.m-lenz.tech/"
-                    rel="noreferrer"
-                    style={{ textDecoration: 'none' }}
+            <div style={{ color: '#000000', textAlign: 'right' }}>
+                <p
+                    style={{
+                        backgroundColor: 'white',
+                        display: 'inline-block',
+                    }}
                 >
-                    bat.m-lenz.tech
-                </a>
-                "
-            </p>
+                    *For deeper insights, please visit this link "
+                    <a
+                        target="_blank"
+                        href="https://bat.m-lenz.tech/"
+                        rel="noreferrer"
+                        style={{
+                            textDecoration: 'none',
+
+                            fontWeight: '700',
+                        }}
+                    >
+                        bat.m-lenz.tech
+                    </a>
+                    "
+                </p>
+            </div>
         </div>
     );
 }
