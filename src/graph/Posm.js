@@ -53,7 +53,7 @@ function Posm({ usagesData }) {
                         },
                         isStacked: 'percent',
                         legend: 'none',
-                        colors: ['#00447A', '#60B0F3'],
+                        colors: ['#3DCBF8', '#00447A'],
                         tooltip: {
                             showColorCode: true,
                         },

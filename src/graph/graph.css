@@ -90,11 +90,11 @@ text {
     margin-top: 5px;
 }
 .right-hr-positive {
-    background-color: #00447a;
+    background-color: #3dcbf8;
 }
 .right-hr-negative {
     margin-left: 15px;
-    background-color: #227cbf;
+    background-color: #00447a;
 }
 .total-value > p,
 .single-value,

@@ -52,10 +52,10 @@ function CommonPieChart({
                         pieSliceBordercolor: '#3DCBF8',
                         slices: [
                             {
-                                color: '#00447A',
+                                color: '#3DCBF8',
                             },
                             {
-                                color: '#3DCBF8',
+                                color: '#00447A',
                             },
                         ],
                         border: 'none',
