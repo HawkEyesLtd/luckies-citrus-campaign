@@ -14,7 +14,7 @@ function NavBar() {
                 <div className="nav-content">
                     <div className="content-wrapper">
                         <img src={logo} alt="logo" width="200px" />
-                        <h1 className="dashboard-heading">S&D Dashboard</h1>
+                        <h1 className="dashboard-heading">Market Lenz Dashboard</h1>
                     </div>
                 </div>
             </div>
