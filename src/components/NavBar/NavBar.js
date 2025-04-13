@@ -3,7 +3,7 @@
 import React from 'react';
 import 'react-multi-date-picker/styles/colors/yellow.css';
 // import logo from '../../assets/logo.png';
-import logo from '../../assets/ui/SVG/Logo.svg';
+import logo from '../../assets/images/Logo.svg';
 import './nav.css';
 
 function NavBar() {
