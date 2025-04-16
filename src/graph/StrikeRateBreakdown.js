@@ -136,7 +136,7 @@ function StrikeRateBreakdown({data}) {
                     />
                     <Bar
                         dataKey="value"
-                        radius={[25, 25, 0, 0]}
+                        radius={[0, 0, 0, 0]}
                         fillOpacity={opacity.value}
                         fill="#000000">
                         <LabelList dataKey="value" position="insideTop" angle="45" content={renderCustomizedLabel}/>
