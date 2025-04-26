@@ -132,7 +132,7 @@ function Dashboard() {
 
         const raw = JSON.stringify({
             campaignType: 'Tobacco',
-            selectedCampaign: '6802528007b05d2e84a25512',
+            selectedCampaign: '680b2ab6f3e4548c88d148c2',
             ...newDate,
             ...data,
         });
@@ -177,7 +177,7 @@ function Dashboard() {
 
         const raw = JSON.stringify({
             campaignType: 'Tobacco',
-            selectedCampaign: '6802528007b05d2e84a25512',
+            selectedCampaign: '680b2ab6f3e4548c88d148c2',
             ...data,
         });
 
@@ -204,7 +204,7 @@ function Dashboard() {
 
         const raw = JSON.stringify({
             campaignType: 'Tobacco',
-            selectedCampaign: '6802528007b05d2e84a25512',
+            selectedCampaign: '680b2ab6f3e4548c88d148c2',
         });
 
         const requestOptions = {

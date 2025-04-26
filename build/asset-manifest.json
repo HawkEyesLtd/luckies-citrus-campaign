@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.95e3eb1f.css",
-    "main.js": "/static/js/main.2412a4e2.js",
-    "static/js/787.ee0ad6c0.chunk.js": "/static/js/787.ee0ad6c0.chunk.js",
-    "static/media/Header@5x.png": "/static/media/Header@5x.9ff183fad05ba162782d.png",
-    "static/media/Lucky Strike Logo@5x.png": "/static/media/Lucky Strike Logo@5x.232f33f73e937c435f66.png",
-    "static/media/Background@5x.png": "/static/media/Background@5x.4d6d6b6e3d9d77a817da.png",
-    "static/media/trade-gothic.ttf": "/static/media/trade-gothic.9efed080cd3c208ee205.ttf",
-    "static/media/trade-gothic-bold.ttf": "/static/media/trade-gothic-bold.b97b314b1be24e5559ff.ttf",
+    "main.css": "/static/css/main.437f373d.css",
+    "main.js": "/static/js/main.1dc9a9c3.js",
+    "static/media/header-bg.jpg": "/static/media/header-bg.adecd648b50272d9862f.jpg",
+    "static/media/body-bg.jpg": "/static/media/body-bg.65bf2420f69c02f85054.jpg",
+    "static/media/Trade Gothic LT.ttf": "/static/media/Trade Gothic LT.9efed080cd3c208ee205.ttf",
+    "static/media/Trade Gothic LT Bold.ttf": "/static/media/Trade Gothic LT Bold.b97b314b1be24e5559ff.ttf",
+    "static/media/Logo.svg": "/static/media/Logo.ac01d76c44c168f5ade1b17df19e61d5.svg",
     "index.html": "/index.html",
-    "main.95e3eb1f.css.map": "/static/css/main.95e3eb1f.css.map",
-    "main.2412a4e2.js.map": "/static/js/main.2412a4e2.js.map",
-    "787.ee0ad6c0.chunk.js.map": "/static/js/787.ee0ad6c0.chunk.js.map"
+    "main.437f373d.css.map": "/static/css/main.437f373d.css.map",
+    "main.1dc9a9c3.js.map": "/static/js/main.1dc9a9c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.95e3eb1f.css",
-    "static/js/main.2412a4e2.js"
+    "static/css/main.437f373d.css",
+    "static/js/main.1dc9a9c3.js"
   ]
 }
