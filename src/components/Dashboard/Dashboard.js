@@ -355,7 +355,7 @@ function Dashboard() {
                             </Row>
 
                             <Row>
-                                <Col md={6} sm={12} lg={4}>
+                                {/* <Col md={6} sm={12} lg={4}>
                                     <div className="ibox">
                                         <div className="ibox-title">Valid GHW</div>
                                         <div className="ibox-content">
@@ -383,9 +383,9 @@ function Dashboard() {
                                             />
                                         </div>
                                     </div>
-                                </Col>
+                                </Col> */}
 
-                                <Col md={6} sm={12} lg={4}>
+                                <Col md={6} sm={12}>
                                     <div className="ibox">
                                         <div className="ibox-title">Planogram Valid Sequence</div>
                                         <div className="ibox-content">
@@ -432,7 +432,7 @@ function Dashboard() {
                                     </div>
                                 </Col>
 
-                                <Col md={6} sm={12} lg={4}>
+                                <Col md={6} sm={12}>
                                     <div className="ibox">
                                         <div className="ibox-title">POSM Detected</div>
                                         <div className="ibox-content">
