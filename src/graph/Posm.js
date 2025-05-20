@@ -1,4 +1,3 @@
-import React from 'react';
 import Chart from 'react-google-charts';
 import { PuffLoader } from 'react-spinners';
 import './graph.css';
@@ -53,7 +52,7 @@ function Posm({ usagesData }) {
                         },
                         isStacked: 'percent',
                         legend: 'none',
-                        colors: ['#3DCBF8', '#00447A'],
+                        colors: ['#753b10', '#e1801e'],
                         tooltip: {
                             showColorCode: true,
                         },

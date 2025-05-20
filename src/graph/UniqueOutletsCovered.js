@@ -54,7 +54,7 @@ function UniqueOutletsCovered({ data }) {
                         },
                         isStacked: 'percent',
                         legend: 'none',
-                        colors: ['#3DCBF8', '#00447A'],
+                        colors: ['#753b10', '#e1801e'],
                         tooltip: {
                             showColorCode: true,
                         },

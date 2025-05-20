@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-useless-fragment */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HashLoader } from 'react-spinners';
 import Dashboard from './components/Dashboard/Dashboard';
 
@@ -17,7 +17,7 @@ function App() {
         <>
             {loading ? (
                 <div className="loading-content">
-                    <HashLoader color="#00447A" loading={loading} size={150} />
+                    <HashLoader color="#5a290d" loading={loading} size={150} />
                 </div>
             ) : (
                 <Dashboard />

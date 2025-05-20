@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
+import React from "react";
 import {
     Bar,
     BarChart,
@@ -10,9 +10,9 @@ import {
     Legend,
     ResponsiveContainer,
     Tooltip,
-    YAxis
-} from 'recharts';
-import './graph.css';
+    YAxis,
+} from "recharts";
+import "./graph.css";
 
 // const data = [
 //     {
@@ -38,16 +38,13 @@ import './graph.css';
 // ];
 
 const colors2 = [
-    '#00447A',
-    '#27C0F3',
-    '#016DBB',
-    '#56C4C3',
-    '#0296CB',
-    '#72CAF3',
-    '#00809E',
-    '#56C4C3',
-    '#60B0F3',
-    '#72CAF3'
+    "#422211",
+    "#753b10",
+    "#904c14",
+    "#ab5e17",
+    "#c66f1a",
+    "#e1801e",
+    "#fc9221",
 ];
 
 function CustomTooltip({ active, payload }) {
@@ -67,81 +64,106 @@ const renderCustomizedLabel = (props) => {
     const radius = 10;
 
     return (
-      <g>
-        <text x={x + width / 2} y={y - radius} fill="#fff"  textAnchor="middle" dominantBaseline="middle">
-          {value}%
-        </text>
-      </g>
+        <g>
+            <text
+                x={x + width / 2}
+                y={y - radius}
+                fill="#fff"
+                textAnchor="middle"
+                dominantBaseline="middle"
+            >
+                {value}%
+            </text>
+        </g>
     );
-  };
+};
 
-  function percentCalculate(target, completed) {
+function percentCalculate(target, completed) {
     return Math.round((completed / target) * 100 || 0);
-  }
+}
 
-function StrikeRateBreakdown({data}) {
-
-    const newData = data?.map((x) => ({name: x.from, value: percentCalculate(x.target, x.completed)}))
+function StrikeRateBreakdown({ data }) {
+    const newData = data?.map((x) => ({
+        name: x.from,
+        value: percentCalculate(x.target, x.completed),
+    }));
 
     const [opacity, setOpacity] = React.useState({
         value: 1,
-      });
-      const handleMouseEnter = (o) => {
+    });
+    const handleMouseEnter = (o) => {
         const { value } = o;
         setOpacity({ ...opacity, [value]: 0.5 });
-      };
-      const handleMouseLeave = (o) => {
+    };
+    const handleMouseLeave = (o) => {
         const { value } = o;
         setOpacity({ ...opacity, [value]: 1 });
-      };
+    };
 
     return (
-        <div style={{height: '100%'}}>
+        <div style={{ height: "100%" }}>
             <ResponsiveContainer width="100%" height={235}>
-                <BarChart data={newData}
-                      margin={{
+                <BarChart
+                    data={newData}
+                    margin={{
                         top: 30,
                         right: 20,
                         left: 10,
                         bottom: 50,
-                      }}>
-                     <CartesianGrid stroke="#089D97" strokeWidth={0.3} />
+                    }}
+                >
+                    <CartesianGrid stroke="#089D97" strokeWidth={0.3} />
                     <Tooltip
                         content={<CustomTooltip />}
-                        cursor={{ fill: '#4C5B8B' }}
+                        cursor={{ fill: "#4c2d1b" }}
                         wrapperStyle={{ outline: "none" }}
                     />
                     <Legend
                         iconSize={14}
-                        wrapperStyle={{ fontSize: '14px', paddingTop: '10px', color: '#227CBF' }}
+                        wrapperStyle={{
+                            fontSize: "14px",
+                            paddingTop: "10px",
+                            color: "#227CBF",
+                        }}
                         layout="horizontal"
-                        verticalAlign = "bottom"
+                        verticalAlign="bottom"
                         payload={newData.map((item, index) => ({
                             id: item.name,
-                            type: 'square',
+                            type: "square",
                             value: `${item.name}`,
                             color: colors2[index % colors2.length],
                         }))}
                         // eslint-disable-next-line react/no-unstable-nested-components
-                        formatter={(value) => <span style={{ color: '#fff' }}>{value}</span>}
+                        formatter={(value) => (
+                            <span style={{ color: "#fff" }}>{value}</span>
+                        )}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     />
                     <YAxis
                         domain={[0, 100]}
-                        tick={{ fill: '#fff' }}
+                        tick={{ fill: "#fff" }}
                         tickFormatter={(number) => `${number}%`}
                         tickCount={3}
-                        axisLine={{stroke:"#089D97", strokeWidth:0.3}}
+                        axisLine={{ stroke: "#089D97", strokeWidth: 0.3 }}
                     />
                     <Bar
                         dataKey="value"
                         radius={[0, 0, 0, 0]}
                         fillOpacity={opacity.value}
-                        fill="#000000">
-                        <LabelList dataKey="value" position="insideTop" angle="45" content={renderCustomizedLabel}/>
+                        fill="#000000"
+                    >
+                        <LabelList
+                            dataKey="value"
+                            position="insideTop"
+                            angle="45"
+                            content={renderCustomizedLabel}
+                        />
                         {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={colors2[index % 20]} />
+                            <Cell
+                                key={`cell-${index}`}
+                                fill={colors2[index % 20]}
+                            />
                         ))}
                     </Bar>
                 </BarChart>

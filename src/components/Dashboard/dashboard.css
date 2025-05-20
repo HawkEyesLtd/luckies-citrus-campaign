@@ -31,8 +31,10 @@
 }
 
 .dashboard-main-container {
-    width: 85%;
-    margin: 0 auto;
+    background-image: url("../../assets/images/body-container.jpg");
+    width: 90%;
+    margin: 20px auto;
+    padding: 5px 20px;
     border-radius: 2px;
     position: relative;
     z-index: 1;
@@ -45,9 +47,9 @@
 }
 
 .ibox {
-    background: rgba(76, 91, 139, 0.85);
+    background: #e5b465;
     backdrop-filter: blur(5px);
-    border: 1px solid #03a28f;
+    border: 1px solid #753b10;
     box-sizing: border-box;
     -webkit-box-shadow: 10px 11px 5px -3px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 10px 11px 5px -3px rgba(0, 0, 0, 0.24);
@@ -60,7 +62,7 @@
 .ai-title {
     min-height: 40px;
     padding: 5px 15px 5px 15px !important;
-    background: linear-gradient(107.2deg, #00809e 10.6%, #00447a 91.1%);
+    background: linear-gradient(107.2deg, #fc9221, #5a290d);
     border-radius: 7px 7px 0px 0px;
     font-weight: 600;
     color: #fff !important;

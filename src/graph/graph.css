@@ -9,19 +9,19 @@
 }
 .rmsc {
     --rmsc-radius: 12px !important;
-    --rmsc-border: #00b7f2 !important;
+    --rmsc-border: #753b10 !important;
     /* --rmsc-focus: #f1f3f5 important; */
     /* --rmsc-main: #4285f4;
     --rmsc-hover: #f1f3f5;
-    
+
     --rmsc-gray: #aaa;
     --rmsc-bg: #eecd94!important;
     --rmsc-p: 10px; */
-    --rmsc-selected: #bdbcbc !important;
+    --rmsc-selected: #422211 !important;
     --rmsc-h: 32px !important;
 }
 .rmsc.multiselect-input > .dropdown-container {
-    background-color: #00b7f2 !important;
+    background-color: #c66f1a !important;
 }
 .rmsc.multiselect-input > .dropdown-container > .dropdown-heading {
     z-index: 55;
@@ -35,7 +35,7 @@
 }
 /* tooltip style */
 .custom-tooltip {
-    background: linear-gradient(90deg, #00447a 0%, #00b7f2 100%);
+    background: linear-gradient(70deg, #fc9221, #5a290d);
     color: #fff;
     padding: 8px 12px;
     border-radius: 10px;
@@ -90,11 +90,11 @@ text {
     margin-top: 5px;
 }
 .right-hr-positive {
-    background-color: #3dcbf8;
+    background-color: #753b10;
 }
 .right-hr-negative {
     margin-left: 15px;
-    background-color: #00447a;
+    background-color: #e1801e;
 }
 .total-value > p,
 .single-value,
@@ -143,13 +143,13 @@ text {
 }
 .custom-button {
     width: 100%;
-    background: #00b7f2;
+    background: #c66f1a;
     border: none;
     border-radius: 7px;
     color: #fff;
     height: 32px;
     font-weight: 400;
-    border: 1px solid #03a28f;
+    border: 1px solid #753b10;
 }
 .custom-p {
     font-weight: 600;
@@ -183,11 +183,10 @@ text {
 }
 .custom-input {
     border-radius: 15px;
-    border: 1px #00b7f2 solid;
+    border: 1px #753b10 solid;
     padding: 4px 12px;
-    background-color: transparent;
     height: 32px;
-    box-shadow: 0 0 2px #00b7f2;
+    box-shadow: 0 0 2px #753b10;
     text-align: right;
     font-weight: 400;
     width: 100%;
@@ -197,7 +196,7 @@ text {
 .custom-input:focus {
     outline: none;
     border: 1px solid #3dcbf8 !important;
-    box-shadow: 0 0 10px 2px #00b7f2 !important;
+    box-shadow: 0 0 10px 2px #753b10 !important;
 }
 .custom-input::placeholder {
     opacity: 1 !important;
@@ -215,7 +214,7 @@ text {
     color: #fff !important;
 }
 .rmsc.multiselect-input .dropdown-container:focus-within {
-    border: 1px solid #00b7f2 !important; /* Change the border color */
+    border: 1px solid #753b10 !important; /* Change the border color */
     outline: none !important; /* Remove default blue outline */
 }
 .rmsc.multiselect-input .dropdown-container:focus-within {

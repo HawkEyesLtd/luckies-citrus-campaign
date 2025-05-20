@@ -4,7 +4,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable import/no-unresolved */
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import RingLoader from 'react-spinners/RingLoader';
 import ByDayStrikeRate from '../../graph/ByDayStrikeRate';
@@ -256,7 +256,7 @@ function Dashboard() {
 
                     {loading ? (
                         <div className="loader">
-                            <RingLoader color="#00447A" loading={loading} size={180} />
+                            <RingLoader color="#5a290d" loading={loading} size={180} />
                         </div>
                     ) : (
                         <>
@@ -281,7 +281,6 @@ function Dashboard() {
                                     </div>
                                 </Col>
                             </Row>
-
                             {newData?.targetsByDay ? (
                                 <Row>
                                     <Col>
@@ -296,7 +295,6 @@ function Dashboard() {
                                     </Col>
                                 </Row>
                             ) : null}
-
                             <Row>
                                 <Col md={12} sm={12} lg={8}>
                                     <div className="ibox">
@@ -347,17 +345,16 @@ function Dashboard() {
                                     </div>
                                 </Col>
                             </Row>
-
+                            {/* //TODO: add change and add eye lavel */}
                             <Row style={{ marginBottom: '20px' }}>
                                 <Col>
                                     <div className="ai-title">AI Evaluation</div>
                                 </Col>
                             </Row>
-
                             <Row>
-                                {/* <Col md={6} sm={12} lg={4}>
+                                <Col md={6} sm={12} lg={4}>
                                     <div className="ibox">
-                                        <div className="ibox-title">Valid GHW</div>
+                                        <div className="ibox-title">Eye Level</div>
                                         <div className="ibox-content">
                                             <CommonPieChart
                                                 val={
@@ -383,9 +380,9 @@ function Dashboard() {
                                             />
                                         </div>
                                     </div>
-                                </Col> */}
+                                </Col>
 
-                                <Col md={6} sm={12}>
+                                <Col lg={4} md={6} sm={12}>
                                     <div className="ibox">
                                         <div className="ibox-title">Planogram Valid Sequence</div>
                                         <div className="ibox-content">
@@ -432,7 +429,7 @@ function Dashboard() {
                                     </div>
                                 </Col>
 
-                                <Col md={6} sm={12}>
+                                <Col lg={4} md={6} sm={12}>
                                     <div className="ibox">
                                         <div className="ibox-title">POSM Detected</div>
                                         <div className="ibox-content">
@@ -459,7 +456,6 @@ function Dashboard() {
                                     </div>
                                 </Col>
                             </Row>
-
                             <Row md={1} lg={1} className="pb-5">
                                 <Col>
                                     <div className="ibox">
@@ -472,9 +468,9 @@ function Dashboard() {
                             </Row>
                         </>
                     )}
-                    <Footer />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

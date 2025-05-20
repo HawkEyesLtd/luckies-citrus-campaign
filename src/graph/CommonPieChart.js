@@ -37,7 +37,7 @@ function CommonPieChart({
                                 height: '100%',
                             }}
                         >
-                            <PuffLoader color="#00447A" loading size={60} />
+                            <PuffLoader color="#e1801e" loading size={60} />
                         </div>
                     }
                     data={data}
@@ -49,13 +49,13 @@ function CommonPieChart({
                             showColorCode: true,
                             backgroundColor: 'black',
                         },
-                        pieSliceBordercolor: '#3DCBF8',
+                        pieSliceBordercolor: '#753b10',
                         slices: [
                             {
-                                color: '#3DCBF8',
+                                color: '#753b10',
                             },
                             {
-                                color: '#00447A',
+                                color: '#e1801e',
                             },
                         ],
                         border: 'none',

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.55 223.21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e1801e;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #753b10;
+      }
+
+      .cls-4 {
+        font-family: Poppins-SemiBold, Poppins;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .cls-5 {
+        fill: #c66f1a;
+      }
+
+      .cls-6 {
+        fill: #904c14;
+      }
+
+      .cls-7 {
+        fill: #fc9221;
+      }
+
+      .cls-8 {
+        fill: #ab5e17;
+      }
+
+      .cls-9 {
+        fill: #5a290d;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <rect class="cls-2" width="882.55" height="223.21"/>
+    <g>
+      <rect class="cls-9" x="102.6" y="75.13" width="71.3" height="71.3"/>
+      <rect class="cls-3" x="201.19" y="75.13" width="71.3" height="71.3"/>
+      <rect class="cls-6" x="299.77" y="75.13" width="71.3" height="71.3"/>
+      <rect class="cls-8" x="398.36" y="75.13" width="71.3" height="71.3"/>
+      <rect class="cls-5" x="496.94" y="75.13" width="71.3" height="71.3"/>
+      <rect class="cls-1" x="595.53" y="75.13" width="71.3" height="71.3"/>
+      <rect class="cls-7" x="694.11" y="75.13" width="71.3" height="71.3"/>
+    </g>
+    <text class="cls-4" transform="translate(115.1 165.27)"><tspan x="0" y="0">5a290d</tspan></text>
+    <text class="cls-4" transform="translate(214.39 165.27)"><tspan x="0" y="0">753b10</tspan></text>
+    <text class="cls-4" transform="translate(313.67 165.27)"><tspan x="0" y="0">904c14</tspan></text>
+    <text class="cls-4" transform="translate(412.95 165.27)"><tspan x="0" y="0">ab5e17</tspan></text>
+    <text class="cls-4" transform="translate(512.24 165.27)"><tspan x="0" y="0">c66f1a</tspan></text>
+    <text class="cls-4" transform="translate(611.52 165.27)"><tspan x="0" y="0">e1801e</tspan></text>
+    <text class="cls-4" transform="translate(710.81 165.27)"><tspan x="0" y="0">fc9221</tspan></text>
+  </g>
+</svg>
