@@ -1,4 +1,3 @@
-import React from 'react';
 import Chart from 'react-google-charts';
 import { PuffLoader } from 'react-spinners';
 import './graph.css';
@@ -27,7 +26,7 @@ function UniqueOutletsCovered({ data }) {
                                 height: '100%',
                             }}
                         >
-                            <PuffLoader color="#00447A" loading size={60} />
+                            <PuffLoader color="#753b10" loading size={60} />
                         </div>
                     }
                     data={data2}
@@ -49,8 +48,8 @@ function UniqueOutletsCovered({ data }) {
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                             },
-                            baselineColor: '#00447A',
-                            gridlineColor: '#00447A',
+                            baselineColor: '#753b10',
+                            gridlineColor: '#753b10',
                         },
                         isStacked: 'percent',
                         legend: 'none',

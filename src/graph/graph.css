@@ -106,7 +106,7 @@ text {
 .total-value > p {
     font-size: 16px;
     font-weight: 600;
-    color: #fff;
+    color: #fffffe;
     font-family: "Trade Gothic";
 }
 .single-value {
@@ -117,7 +117,7 @@ text {
 .value-text {
     margin: -5px 0 0 0 !important;
     font-size: 11px;
-    color: #cecccc;
+    color: whitesmoke;
 }
 .value-percent {
     font-size: 15px;

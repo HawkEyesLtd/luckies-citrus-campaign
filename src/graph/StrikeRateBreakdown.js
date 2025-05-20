@@ -112,7 +112,7 @@ function StrikeRateBreakdown({ data }) {
                         bottom: 50,
                     }}
                 >
-                    <CartesianGrid stroke="#089D97" strokeWidth={0.3} />
+                    <CartesianGrid stroke="#753b10" strokeWidth={0.3} />
                     <Tooltip
                         content={<CustomTooltip />}
                         cursor={{ fill: "#4c2d1b" }}
