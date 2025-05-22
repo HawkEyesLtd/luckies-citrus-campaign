@@ -382,7 +382,7 @@ function Dashboard() {
                                     </div>
                                 </Col> */}
 
-                                <Col md={12} sm={24}>
+                                <Col md={6} sm={12}>
                                     <div className="ibox">
                                         <div className="ibox-title">Planogram Valid Sequence</div>
                                         <div className="ibox-content">
@@ -429,7 +429,7 @@ function Dashboard() {
                                     </div>
                                 </Col>
 
-                                <Col md={12} sm={24}>
+                                <Col md={6} sm={24}>
                                     <div className="ibox">
                                         <div className="ibox-title">POSM Detected</div>
                                         <div className="ibox-content">
