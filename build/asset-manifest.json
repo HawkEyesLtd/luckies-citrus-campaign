@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.437f373d.css",
-    "main.js": "/static/js/main.1dc9a9c3.js",
-    "static/media/header-bg.jpg": "/static/media/header-bg.adecd648b50272d9862f.jpg",
-    "static/media/body-bg.jpg": "/static/media/body-bg.65bf2420f69c02f85054.jpg",
+    "main.css": "/static/css/main.b50443a1.css",
+    "main.js": "/static/js/main.40377229.js",
+    "static/media/body-bg.jpg": "/static/media/body-bg.c5e4c077bfe486ecb585.jpg",
+    "static/media/header-bg.png": "/static/media/header-bg.7f68ed94b82a7c458da4.png",
+    "static/media/body-container.jpg": "/static/media/body-container.98b5109cdba9c648ccb8.jpg",
     "static/media/Trade Gothic LT.ttf": "/static/media/Trade Gothic LT.9efed080cd3c208ee205.ttf",
     "static/media/Trade Gothic LT Bold.ttf": "/static/media/Trade Gothic LT Bold.b97b314b1be24e5559ff.ttf",
-    "static/media/Logo.svg": "/static/media/Logo.ac01d76c44c168f5ade1b17df19e61d5.svg",
-    "index.html": "/index.html",
-    "main.437f373d.css.map": "/static/css/main.437f373d.css.map",
-    "main.1dc9a9c3.js.map": "/static/js/main.1dc9a9c3.js.map"
+    "static/media/logo.png": "/static/media/logo.5ec36501d7394b3210cc.png",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.437f373d.css",
-    "static/js/main.1dc9a9c3.js"
+    "static/css/main.b50443a1.css",
+    "static/js/main.40377229.js"
   ]
 }
