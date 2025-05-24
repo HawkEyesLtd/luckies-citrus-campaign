@@ -14,3 +14,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# .gitignore
+package-lock.json
+yarn.lock
+bun.lockb
