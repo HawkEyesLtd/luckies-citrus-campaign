@@ -1,66 +1,69 @@
 {
-  "name": "pj-strike-5-ls-pug",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@babel/eslint-parser": "^7.19.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.2.3",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.0",
-    "react-dom": "^18.2.0",
-    "react-google-charts": "^4.0.0",
-    "react-multi-date-picker": "^3.3.4",
-    "react-multi-select-component": "^4.3.4",
-    "react-scripts": "5.0.1",
-    "react-spinners": "^0.13.8",
-    "recharts": "^2.3.2",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "cleanBuild": "npx rimraf ./build/*",
-    "lint": "npm add -D prettier && npm add -D babel-eslint && npx install-peerdeps --dev eslint-config-airbnb && npm add -D eslint-config-prettier eslint-plugin-prettier",
-    "build": "npm run cleanBuild && set \"GENERATE_SOURCEMAP=false\" && react-scripts build ",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "echo 'Warning: This project works best with PNPM! Run pnpm install if you encounter issues.'"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "pj-strike-5-ls-pug",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@babel/eslint-parser": "^7.19.1",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "bootstrap": "^5.2.3",
+        "react": "^18.2.0",
+        "react-bootstrap": "^2.7.0",
+        "react-dom": "^18.2.0",
+        "react-google-charts": "^4.0.0",
+        "react-multi-date-picker": "^3.3.4",
+        "react-multi-select-component": "^4.3.4",
+        "react-scripts": "5.0.1",
+        "react-spinners": "^0.13.8",
+        "recharts": "^2.3.2",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "cleanBuild": "npx rimraf build",
+        "lint": "npm add -D prettier && npm add -D babel-eslint && npx install-peerdeps --dev eslint-config-airbnb && npm add -D eslint-config-prettier eslint-plugin-prettier",
+        "build": "npm run cleanBuild && set \"GENERATE_SOURCEMAP=false\" && react-scripts build ",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "postinstall": "echo 'Warning: This project works best with PNPM! Run pnpm install if you encounter issues.'"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.27.1",
+        "@babel/preset-react": "^7.27.1",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^8.2.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "prettier": "^2.8.3",
+        "rimraf": "^6.0.1"
+    },
+    "trustedDependencies": [
+        "core-js",
+        "core-js-pure"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.8.3"
-  },
-  "trustedDependencies": [
-    "core-js",
-    "core-js-pure"
-  ],
-  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+    "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }
