@@ -1,6 +1,6 @@
 .nav-container {
     position: relative;
-    background-image: url("../../assets/images/header-bg.png");
+    background-image: url("../../assets/images/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -100,11 +100,11 @@
 /* custom calender style */
 .custom-input {
     border-radius: 15px;
-    border: 1px #753b10 solid;
+    border: 1px #5b741f solid;
     padding: 4px 12px;
-    background-color: #c66f1a;
+      background: linear-gradient(0, #b4da23, #14231c);
     height: 32px;
-    box-shadow: 0 0 2px #753b10;
+    box-shadow: 0 0 2px #334d15;
     text-align: right;
     font-weight: 400;
     width: 100%;
@@ -113,8 +113,8 @@
 
 .custom-input:focus {
     outline: none;
-    border: 1px solid #c66f1a;
-    box-shadow: 0 0 10px 2px #753b10;
+    border: 1px solid #334d15;
+    box-shadow: 0 0 10px 2px #334d15;
 }
 .custom-input::placeholder {
     opacity: 1 !important;

@@ -10,13 +10,14 @@ function NavBar() {
             <div className="nav-container">
                 <div className="background-overlay" />
                 <div className="nav-content">
-                    <img src={logo} alt="logo" width="200px" />
                     <div className="content-wrapper">
+                        <img src={logo} alt="logo" width="200px" />
+                        <br />
                         <h1 className="dashboard-heading">Market Lenz Dashboard</h1>
                     </div>
                 </div>
             </div>
-            <div style={{ width: '100%', height: '8px', background: '#5a2a0d' }} />
+            <div style={{ width: '100%', height: '8px', background: '#5b741f' }} />
         </>
     );
 }

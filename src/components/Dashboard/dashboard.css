@@ -31,7 +31,7 @@
 }
 
 .dashboard-main-container {
-    background-image: url("../../assets/images/body-container.jpg");
+    /* background-image: url("../../assets/images/body-bg.jpg"); */
     width: 90%;
     margin: 20px auto;
     padding: 5px 20px;
@@ -47,9 +47,9 @@
 }
 
 .ibox {
-    background: #e5b465;
+    background: #6d8920;
     /* backdrop-filter: blur(5px); c66f1a */
-    border: 1px solid #753b10;
+    border: 1px solid #5b741f;
     box-sizing: border-box;
     -webkit-box-shadow: 10px 11px 5px -3px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 10px 11px 5px -3px rgba(0, 0, 0, 0.24);
@@ -62,7 +62,7 @@
 .ai-title {
     min-height: 40px;
     padding: 5px 15px 5px 15px !important;
-    background: linear-gradient(107.2deg, #fc9221, #5a290d);
+    background: linear-gradient(107.2deg, #b4da23, #14231c);
     border-radius: 7px 7px 0px 0px;
     font-weight: 600;
     color: #fff !important;

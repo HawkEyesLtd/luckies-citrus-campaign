@@ -35,6 +35,7 @@ function Dashboard() {
     const [selectedHouse, setSelectedHouse] = useState([]);
     const [selectedTerritory, setSelectedTerritory] = useState([]);
     const [selectedPoint, setSelectedPoint] = useState([]);
+    const [hypercare, setHypercare] = useState([]);
     const [action, setAction] = useState(false);
 
     const handleSelect = (selectedList, eventName) => {
@@ -125,6 +126,10 @@ function Dashboard() {
         }
         if (period.to) {
             newDate.to = period.to;
+        }
+
+        if (hypercare && hypercare.length > 0) {
+            newDate.hypercareStatus = hypercare;
         }
 
         const myHeaders = new Headers();
@@ -252,11 +257,13 @@ function Dashboard() {
                         setValue={setValue}
                         live={live}
                         setTodaysData={setTodaysData}
+                        hypercare={hypercare}
+                        setHypercare={setHypercare}
                     />
 
                     {loading ? (
                         <div className="loader">
-                            <RingLoader color="#5a290d" loading={loading} size={180} />
+                            <RingLoader color="#6d8920" loading={loading} size={180} />
                         </div>
                     ) : (
                         <>

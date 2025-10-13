@@ -25,7 +25,7 @@ function Posm({ usagesData }) {
                                 height: '100%',
                             }}
                         >
-                            <PuffLoader color="#753b10" loading size={60} />
+                            <PuffLoader color="#5b741f" loading size={60} />
                         </div>
                     }
                     data={data2}
@@ -47,12 +47,12 @@ function Posm({ usagesData }) {
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                             },
-                            baselineColor: '#753b10',
-                            gridlineColor: '#753b10',
+                            baselineColor: '#5b741f',
+                            gridlineColor: '#5b741f',
                         },
                         isStacked: 'percent',
                         legend: 'none',
-                        colors: ['#753b10', '#e1801e'],
+                        colors: ['#5b741f', '#b4da23'],
                         tooltip: {
                             showColorCode: true,
                         },

@@ -2,15 +2,15 @@
 /* eslint-disable react/no-array-index-key */
 import React from "react";
 import {
-    Bar,
-    BarChart,
-    CartesianGrid,
-    Cell,
-    LabelList,
-    Legend,
-    ResponsiveContainer,
-    Tooltip,
-    YAxis,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  LabelList,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  YAxis,
 } from "recharts";
 import "./graph.css";
 
@@ -38,13 +38,16 @@ import "./graph.css";
 // ];
 
 const colors2 = [
-    "#422211",
-    "#753b10",
-    "#904c14",
-    "#ab5e17",
-    "#c66f1a",
-    "#e1801e",
-    "#fc9221",
+    "#14231c",
+    "#26371d",
+    "#384c1e",
+    "#49601e",
+    "#5b741f",
+    "#6d8920",
+    "#7f9d21",
+    "#90b121",
+    "#a2c622",
+    "#b4da23",
 ];
 
 function CustomTooltip({ active, payload }) {
@@ -112,10 +115,10 @@ function StrikeRateBreakdown({ data }) {
                         bottom: 50,
                     }}
                 >
-                    <CartesianGrid stroke="#753b10" strokeWidth={0.3} />
+                    <CartesianGrid stroke="#5b741f" strokeWidth={0.3} />
                     <Tooltip
                         content={<CustomTooltip />}
-                        cursor={{ fill: "#4c2d1b" }}
+                        cursor={{ fill: "#6d8920" }}
                         wrapperStyle={{ outline: "none" }}
                     />
                     <Legend

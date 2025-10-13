@@ -52,7 +52,7 @@ function Blanks() {
                     },
                     isStacked: 'percent',
                     legend: 'none',
-                    colors: ['#AD0000', '#C57575'],
+                    colors: ['#14231c', '#b4da23'],
                     tooltip: {
                         showColorCode: true,
                     },

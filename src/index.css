@@ -23,6 +23,13 @@ body {
     background-attachment: fixed;
 }
 
+:root {
+  --color-dark: '14231c';
+  --color-light: 'b4da23';
+  --color-bg: '6d8920';
+
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Chart } from 'react-google-charts';
 import { PuffLoader } from 'react-spinners';
@@ -37,7 +36,7 @@ function CommonPieChart({
                                 height: '100%',
                             }}
                         >
-                            <PuffLoader color="#e1801e" loading size={60} />
+                            <PuffLoader color="#26371d" loading size={60} />
                         </div>
                     }
                     data={data}
@@ -49,13 +48,13 @@ function CommonPieChart({
                             showColorCode: true,
                             backgroundColor: 'black',
                         },
-                        pieSliceBordercolor: '#753b10',
+                        pieSliceBordercolor: '#5b741f',
                         slices: [
                             {
-                                color: '#753b10',
+                                color: '#5b741f',
                             },
                             {
-                                color: '#e1801e',
+                                color: '#26371d',
                             },
                         ],
                         border: 'none',
