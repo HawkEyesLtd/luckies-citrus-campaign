@@ -39,15 +39,15 @@ function MultiSelectComponents({
     };
   }, [windowSize]);
 
-  if (filterData.length <= 0) return null;
+  if (filterData?.length <= 0) return null;
 
   const closeCalender = () => {};
 
   const dataFunc = (date) => {
-    if (date.length === 2) {
+    if (date?.length === 2) {
       setShow(false);
     }
-    if (date.length === 1) {
+    if (date?.length === 1) {
       setShow(true);
     }
     setValue(date);
@@ -139,10 +139,11 @@ function MultiSelectComponents({
                 },
               ]}
               hasSelectAll={false}
-              value={hypercare}
+              // eslint-disable-next-line no-nested-ternary
+              value={Array.isArray(hypercare) ? hypercare : hypercare ? [hypercare] : []}
               onChange={(v) => {
-                // Only allow one item to be selected at a time
-                setHypercare(v.length > 0 ? [v[v.length - 1]] : []);
+                // Only allow one selection
+                setHypercare(v.length ? [v[v.length - 1]] : []);
               }}
               labelledBy="Select"
               className="multiselect-input"
