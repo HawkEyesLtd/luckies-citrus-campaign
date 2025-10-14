@@ -20,8 +20,6 @@ function MultiSelectComponents({
     disableFilter,
     value,
     setValue,
-    // hypercare,
-    setHypercare,
 }) {
     const datePickerRef = useRef();
     const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -52,6 +50,7 @@ function MultiSelectComponents({
         setValue(date);
         return false;
     };
+
     return (
         <div className="multiselect-main-container">
             <div className="multiselect-content">
@@ -88,7 +87,7 @@ function MultiSelectComponents({
                             hasSelectAll
                             options={filterData.territoryList?.length && filterData.territoryList}
                             value={selectedTerritory}
-                            onChange={(v) => console.log('hypercare', v)}
+                            onChange={(...args) => handleSelect(...args, 'territoryList')}
                             labelledBy="Select"
                             className="multiselect-input"
                             disabled={disableFilter}
@@ -119,24 +118,6 @@ function MultiSelectComponents({
                             className="multiselect-input"
                             disabled={disableFilter}
                             overrideStrings={{ allItemsAreSelected: 'All' }}
-                        />
-                    </Col>
-                    <Col>
-                        <p className="custom-p">Hypercare Status</p>
-                        <MultiSelect
-                            options={[
-                                {
-                                    label: 'Non-Hypercare',
-                                    value: 'Non-Hypercare',
-                                },
-                                {
-                                    label: 'Hypercare',
-                                    value: 'Hypercare',
-                                },
-                            ]}
-                            onChange={(...args) => setHypercare(...args, 'hypercareStatus')}
-                            labelledBy="Select"
-                            className="multiselect-input"
                         />
                     </Col>
                     <Col>

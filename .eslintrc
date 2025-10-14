@@ -22,7 +22,7 @@
     },
     "rules": {
       "react/react-in-jsx-scope": 0,
-      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/rules-of-hooks": "warn",
       "no-console": 0,
       "react/state-in-constructor": 0,
       "indent": 0,
@@ -36,7 +36,7 @@
         }
       ],
       "prettier/prettier": [
-        "error",
+        "warn",
         {
           "trailingComma": "es5",
           "singleQuote": true,

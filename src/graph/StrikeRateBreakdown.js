@@ -38,16 +38,16 @@ import "./graph.css";
 // ];
 
 const colors2 = [
-    "#14231c",
+    // "#14231c",
     "#26371d",
     "#384c1e",
     "#49601e",
     "#5b741f",
-    "#6d8920",
     "#7f9d21",
     "#90b121",
     "#a2c622",
     "#b4da23",
+    "#B4DB1A",
 ];
 
 function CustomTooltip({ active, payload }) {

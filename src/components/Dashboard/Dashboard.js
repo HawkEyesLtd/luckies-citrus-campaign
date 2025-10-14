@@ -9,6 +9,7 @@ import { Col, Row } from 'react-bootstrap';
 import RingLoader from 'react-spinners/RingLoader';
 import ByDayStrikeRate from '../../graph/ByDayStrikeRate';
 import CommonPieChart from '../../graph/CommonPieChart';
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import MultiSelectComponents from '../../graph/MultiSelectComponents';
 import Posm from '../../graph/Posm';
 import StrikeRateBreakdown from '../../graph/StrikeRateBreakdown';
@@ -22,6 +23,7 @@ function Dashboard() {
 
     const [value, setValue] = useState();
     const [todaysData, setTodaysData] = useState(true);
+    const [hypercare, setHypercare] = useState('');
 
     const [live, setLive] = useState(true);
     const [disableFilter, setDisableFilter] = useState(false);
@@ -35,7 +37,6 @@ function Dashboard() {
     const [selectedHouse, setSelectedHouse] = useState([]);
     const [selectedTerritory, setSelectedTerritory] = useState([]);
     const [selectedPoint, setSelectedPoint] = useState([]);
-    const [hypercare, setHypercare] = useState([]);
     const [action, setAction] = useState(false);
 
     const handleSelect = (selectedList, eventName) => {
@@ -128,10 +129,6 @@ function Dashboard() {
             newDate.to = period.to;
         }
 
-        if (hypercare && hypercare.length > 0) {
-            newDate.hypercareStatus = hypercare;
-        }
-
         const myHeaders = new Headers();
         myHeaders.append('Content-Type', 'application/json');
 
@@ -140,6 +137,7 @@ function Dashboard() {
             selectedCampaign: '68303b455e6566abb896822d',
             ...newDate,
             ...data,
+            hypercareStatus: hypercare,
         });
 
         const requestOptions = {
@@ -255,15 +253,15 @@ function Dashboard() {
                         disableFilter={disableFilter}
                         value={value}
                         setValue={setValue}
-                        live={live}
-                        setTodaysData={setTodaysData}
                         hypercare={hypercare}
                         setHypercare={setHypercare}
+                        live={live}
+                        setTodaysData={setTodaysData}
                     />
 
                     {loading ? (
                         <div className="loader">
-                            <RingLoader color="#6d8920" loading={loading} size={180} />
+                            <RingLoader color="#49601e" loading={loading} size={180} />
                         </div>
                     ) : (
                         <>

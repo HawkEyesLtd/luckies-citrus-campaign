@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.e7fd7672.css",
-    "main.js": "/static/js/main.fba4347d.js",
-    "static/media/body-bg.jpg": "/static/media/body-bg.c5e4c077bfe486ecb585.jpg",
-    "static/media/header-bg.png": "/static/media/header-bg.7f68ed94b82a7c458da4.png",
-    "static/media/body-container.jpg": "/static/media/body-container.98b5109cdba9c648ccb8.jpg",
+    "main.css": "/static/css/main.0e61a60a.css",
+    "main.js": "/static/js/main.fa2ad37e.js",
+    "static/media/header-bg.jpg": "/static/media/header-bg.2e176a5b6387360ecbf0.jpg",
+    "static/media/body-bg.jpg": "/static/media/body-bg.bef2f15d4b126963509b.jpg",
+    "static/media/logo.png": "/static/media/logo.6fe4d74df12f638b26a7.png",
     "static/media/Trade Gothic LT.ttf": "/static/media/Trade Gothic LT.9efed080cd3c208ee205.ttf",
     "static/media/Trade Gothic LT Bold.ttf": "/static/media/Trade Gothic LT Bold.b97b314b1be24e5559ff.ttf",
-    "static/media/logo.png": "/static/media/logo.5ec36501d7394b3210cc.png",
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.e7fd7672.css",
-    "static/js/main.fba4347d.js"
+    "static/css/main.0e61a60a.css",
+    "static/js/main.fa2ad37e.js"
   ]
 }
