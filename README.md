@@ -1,19 +1,15 @@
-# Getting Started with Create React App
+# Luckies Citrus Campaign Dashboard
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 🔧 Environment Setup
 
-This project uses environment variables for configuration. See [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md) for detailed instructions.
+The app automatically uses the correct configuration based on environment:
 
-**Quick start:**
-- Development: `npm start` (uses `.env.development`)
-- Production: `npm run build` (uses `.env.production`)
-- Local overrides: Copy `.env.example` to `.env.local`
+- **Development**: `npm start` → Uses dev campaign ID (`68f221b74e1de6ab87ae4911`)
+- **Production**: `npm run build` → Uses prod campaign ID (`68f222ae4e1de6ab87ae4913`)
 
-📚 **Documentation:**
-- [Environment Setup Guide](ENVIRONMENT_SETUP.md) - Complete setup instructions
-- [Environment Comparison](ENVIRONMENT_COMPARISON.md) - Detailed comparison of approaches
+See [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md) for details.
 
 ## Available Scripts
 
