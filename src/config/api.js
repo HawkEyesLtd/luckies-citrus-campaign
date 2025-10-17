@@ -1,4 +1,8 @@
-const isDev = process.env.NODE_ENV === 'development';
+// Environment detection:
+// 1. If REACT_APP_ENV is set (in .env.local), use that
+// 2. Otherwise, use NODE_ENV
+const envMode = process.env.REACT_APP_ENV || process.env.NODE_ENV;
+const isDev = envMode === 'development';
 
 const config = {
     apiBaseUrl: process.env.REACT_APP_API_BASE_URL || 'https://comm.hedigital.net/api/v1',
@@ -20,6 +24,6 @@ const config = {
     },
 };
 
-console.log('[Config]', isDev ? 'DEV' : 'PROD', 'Campaign ID:', config.campaignId);
+console.log('[Config] Environment:', isDev ? 'DEV' : 'PROD', '| Campaign ID:', config.campaignId);
 
 export default config;
