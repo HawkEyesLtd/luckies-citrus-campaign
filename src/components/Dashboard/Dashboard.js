@@ -103,7 +103,7 @@ function Dashboard() {
         return object;
     }, [selectedRegion, selectedArea, selectedTerritory, selectedHouse, selectedPoint]);
 
-    const onSubmit = (values) => {
+    const onSubmit = () => {
         setLoading(true);
         let period = {
             from: '',
@@ -121,8 +121,6 @@ function Dashboard() {
                 };
             }
         }
-
-        console.log('values', values);
 
         const newDate = {};
         if (period.from) {

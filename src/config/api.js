@@ -24,6 +24,6 @@ const config = {
     },
 };
 
-console.log('[Config] Environment:', isDev ? 'DEV' : 'PROD', '| Campaign ID:', config.campaignId);
+// console.log('[Config] Environment:', isDev ? 'DEV' : 'PROD', '| Campaign ID:', config.campaignId);
 
 export default config;
