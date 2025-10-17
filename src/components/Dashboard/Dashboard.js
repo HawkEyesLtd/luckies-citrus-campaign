@@ -7,6 +7,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import RingLoader from 'react-spinners/RingLoader';
+import config from '../../config/api';
 import ByDayStrikeRate from '../../graph/ByDayStrikeRate';
 import CommonPieChart from '../../graph/CommonPieChart';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
@@ -135,8 +136,8 @@ function Dashboard() {
         myHeaders.append('Content-Type', 'application/json');
 
         const raw = JSON.stringify({
-            campaignType: 'Tobacco',
-            selectedCampaign: '68303b455e6566abb896822d',
+            campaignType: config.campaignType,
+            selectedCampaign: config.campaignId,
             ...newDate,
             ...data,
             hypercareStatus: hypercare,
@@ -149,7 +150,7 @@ function Dashboard() {
             redirect: 'follow',
         };
 
-        fetch('https://comm.hedigital.net/api/v1/dashboard/secondary', requestOptions)
+        fetch(config.getApiUrl(config.endpoints.dashboardSecondary), requestOptions)
             .then((res) => res.json())
             .then((doc) => {
                 // if (data.length > 7) data.push(...data.splice(2, 1));
@@ -181,8 +182,8 @@ function Dashboard() {
         myHeaders.append('Content-Type', 'application/json');
 
         const raw = JSON.stringify({
-            campaignType: 'Tobacco',
-            selectedCampaign: '68303b455e6566abb896822d',
+            campaignType: config.campaignType,
+            selectedCampaign: config.campaignId,
             ...data,
         });
 
@@ -193,7 +194,7 @@ function Dashboard() {
             redirect: 'follow',
         };
         setDisableFilter(true);
-        fetch('https://comm.hedigital.net/api/v1/data-management/all-campaignwise', requestOptions)
+        fetch(config.getApiUrl(config.endpoints.allCampaignwise), requestOptions)
             .then((res) => res.json())
             .then((d) => {
                 setFilterData({ ...filterData, ...d.data });
@@ -208,8 +209,8 @@ function Dashboard() {
         myHeaders.append('Content-Type', 'application/json');
 
         const raw = JSON.stringify({
-            campaignType: 'Tobacco',
-            selectedCampaign: '68303b455e6566abb896822d',
+            campaignType: config.campaignType,
+            selectedCampaign: config.campaignId,
         });
 
         const requestOptions = {
@@ -218,7 +219,7 @@ function Dashboard() {
             body: raw,
             redirect: 'follow',
         };
-        fetch('https://comm.hedigital.net/api/v1/dashboard/secondary', requestOptions)
+        fetch(config.getApiUrl(config.endpoints.dashboardSecondary), requestOptions)
             .then((res) => res.json())
             .then((doc) => {
                 setData(doc.data);

@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 🔧 Environment Setup
+
+This project uses environment variables for configuration. See [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md) for detailed instructions.
+
+**Quick start:**
+- Development: `npm start` (uses `.env.development`)
+- Production: `npm run build` (uses `.env.production`)
+- Local overrides: Copy `.env.example` to `.env.local`
+
+📚 **Documentation:**
+- [Environment Setup Guide](ENVIRONMENT_SETUP.md) - Complete setup instructions
+- [Environment Comparison](ENVIRONMENT_COMPARISON.md) - Detailed comparison of approaches
+
 ## Available Scripts
 
 In the project directory, you can run:
