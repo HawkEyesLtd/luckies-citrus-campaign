@@ -7,6 +7,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import RingLoader from 'react-spinners/RingLoader';
+import config from '../../config/api';
 import ByDayStrikeRate from '../../graph/ByDayStrikeRate';
 import CommonPieChart from '../../graph/CommonPieChart';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
@@ -23,7 +24,6 @@ function Dashboard() {
 
     const [value, setValue] = useState();
     const [todaysData, setTodaysData] = useState(true);
-    const [hypercare, setHypercare] = useState('');
 
     const [live, setLive] = useState(true);
     const [disableFilter, setDisableFilter] = useState(false);
@@ -38,6 +38,7 @@ function Dashboard() {
     const [selectedTerritory, setSelectedTerritory] = useState([]);
     const [selectedPoint, setSelectedPoint] = useState([]);
     const [action, setAction] = useState(false);
+    const [hypercareStatus, setHypercareStatus] = useState(null);
 
     const handleSelect = (selectedList, eventName) => {
         if (eventName === 'regionList') {
@@ -135,11 +136,11 @@ function Dashboard() {
         myHeaders.append('Content-Type', 'application/json');
 
         const raw = JSON.stringify({
-            campaignType: 'Tobacco',
-            selectedCampaign: '68303b455e6566abb896822d',
+            campaignType: config.campaignType,
+            selectedCampaign: config.campaignId,
             ...newDate,
             ...data,
-            hypercareStatus: hypercare,
+            hypercareStatus,
         });
 
         const requestOptions = {
@@ -149,7 +150,7 @@ function Dashboard() {
             redirect: 'follow',
         };
 
-        fetch('https://comm.hedigital.net/api/v1/dashboard/secondary', requestOptions)
+        fetch(config.getApiUrl(config.endpoints.dashboardSecondary), requestOptions)
             .then((res) => res.json())
             .then((doc) => {
                 // if (data.length > 7) data.push(...data.splice(2, 1));
@@ -173,6 +174,12 @@ function Dashboard() {
                     }
                     return liveRes;
                 });
+            })
+            .catch(() => {
+                setLoading(false);
+
+                console.trace('Error fetching dashboard data');
+                console.error('Error fetching dashboard data');
             });
     };
 
@@ -181,8 +188,8 @@ function Dashboard() {
         myHeaders.append('Content-Type', 'application/json');
 
         const raw = JSON.stringify({
-            campaignType: 'Tobacco',
-            selectedCampaign: '68303b455e6566abb896822d',
+            campaignType: config.campaignType,
+            selectedCampaign: config.campaignId,
             ...data,
         });
 
@@ -193,7 +200,7 @@ function Dashboard() {
             redirect: 'follow',
         };
         setDisableFilter(true);
-        fetch('https://comm.hedigital.net/api/v1/data-management/all-campaignwise', requestOptions)
+        fetch(config.getApiUrl(config.endpoints.allCampaignwise), requestOptions)
             .then((res) => res.json())
             .then((d) => {
                 setFilterData({ ...filterData, ...d.data });
@@ -208,8 +215,8 @@ function Dashboard() {
         myHeaders.append('Content-Type', 'application/json');
 
         const raw = JSON.stringify({
-            campaignType: 'Tobacco',
-            selectedCampaign: '68303b455e6566abb896822d',
+            campaignType: config.campaignType,
+            selectedCampaign: config.campaignId,
         });
 
         const requestOptions = {
@@ -218,7 +225,7 @@ function Dashboard() {
             body: raw,
             redirect: 'follow',
         };
-        fetch('https://comm.hedigital.net/api/v1/dashboard/secondary', requestOptions)
+        fetch(config.getApiUrl(config.endpoints.dashboardSecondary), requestOptions)
             .then((res) => res.json())
             .then((doc) => {
                 setData(doc.data);
@@ -255,8 +262,7 @@ function Dashboard() {
                         disableFilter={disableFilter}
                         value={value}
                         setValue={setValue}
-                        hypercare={hypercare}
-                        setHypercare={setHypercare}
+                        setHypercareStatus={setHypercareStatus}
                         live={live}
                         setTodaysData={setTodaysData}
                     />
@@ -321,31 +327,33 @@ function Dashboard() {
                                         </div>
                                         <div className="ibox-content">
                                             <CommonPieChart
-                                                totalWithTitle={
-                                                    (
-                                                        newData.total_unique_outlet_covered
-                                                            .covered +
-                                                        newData.total_unique_outlet_covered
-                                                            .unConvered
-                                                    ).toLocaleString() || 0
-                                                }
+                                                totalWithTitle={(
+                                                    (newData?.total_unique_outlet_covered
+                                                        ?.covered ?? 0) +
+                                                    (newData?.total_unique_outlet_covered
+                                                        ?.unConvered ?? 0)
+                                                ).toLocaleString()}
                                                 positive={
-                                                    newData?.total_unique_outlet_covered?.covered ||
+                                                    newData?.total_unique_outlet_covered?.covered ??
                                                     0
                                                 }
                                                 negative={
                                                     newData?.total_unique_outlet_covered
-                                                        ?.unConvered || 0
+                                                        ?.unConvered ?? 0
                                                 }
                                                 posValueText="Covered Outlets"
                                                 negValueText="Remaining Outlets"
                                                 posP={percentCalculate(
-                                                    newData.total_unique_outlet_covered.covered,
-                                                    newData.total_unique_outlet_covered.unConvered
+                                                    newData?.total_unique_outlet_covered?.covered ??
+                                                        0,
+                                                    newData?.total_unique_outlet_covered
+                                                        ?.unConvered ?? 0
                                                 )}
                                                 negP={percentCalculate(
-                                                    newData.total_unique_outlet_covered.unConvered,
-                                                    newData.total_unique_outlet_covered.covered
+                                                    newData?.total_unique_outlet_covered
+                                                        ?.unConvered ?? 0,
+                                                    newData?.total_unique_outlet_covered?.covered ??
+                                                        0
                                                 )}
                                             />
                                         </div>
@@ -365,22 +373,22 @@ function Dashboard() {
                                         <div className="ibox-content">
                                             <CommonPieChart
                                                 val={
-                                                    (newData.GHWAndValidSeq['Combined GHW'].Yes ||
+                                                    (newData?.GHWAndValidSeq['Combined GHW'].Yes ||
                                                         0) +
-                                                    (newData.GHWAndValidSeq['Combined GHW'].No || 0)
+                                                    (newData?.GHWAndValidSeq['Combined GHW'].No || 0)
                                                 }
                                                 totalWithTitle=" Unique Outlets"
                                                 positive={
-                                                    newData.GHWAndValidSeq['Combined GHW'].Yes
+                                                    newData?.GHWAndValidSeq['Combined GHW'].Yes
                                                 }
-                                                negative={newData.GHWAndValidSeq['Combined GHW'].No}
+                                                negative={newData?.GHWAndValidSeq['Combined GHW'].No}
                                                 posP={percentCalculate(
-                                                    newData.GHWAndValidSeq['Combined GHW'].Yes,
-                                                    newData.GHWAndValidSeq['Combined GHW'].No
+                                                    newData?.GHWAndValidSeq['Combined GHW'].Yes,
+                                                    newData?.GHWAndValidSeq['Combined GHW'].No
                                                 )}
                                                 negP={percentCalculate(
-                                                    newData.GHWAndValidSeq['Combined GHW'].No,
-                                                    newData.GHWAndValidSeq['Combined GHW'].Yes
+                                                    newData?.GHWAndValidSeq['Combined GHW'].No,
+                                                    newData?.GHWAndValidSeq['Combined GHW'].Yes
                                                 )}
                                                 posValueText="Yes"
                                                 negValueText="No"
@@ -395,37 +403,37 @@ function Dashboard() {
                                         <div className="ibox-content">
                                             <CommonPieChart
                                                 val={
-                                                    (newData.GHWAndValidSeq[
+                                                    (newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].Yes || 0) +
-                                                    (newData.GHWAndValidSeq[
+                                                    (newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].No || 0)
                                                 }
                                                 totalWithTitle=" Unique Outlets"
                                                 positive={
-                                                    newData.GHWAndValidSeq[
+                                                    newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].Yes
                                                 }
                                                 negative={
-                                                    newData.GHWAndValidSeq[
+                                                    newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].No
                                                 }
                                                 posP={percentCalculate(
-                                                    newData.GHWAndValidSeq[
+                                                    newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].Yes,
-                                                    newData.GHWAndValidSeq[
+                                                    newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].No
                                                 )}
                                                 negP={percentCalculate(
-                                                    newData.GHWAndValidSeq[
+                                                    newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].No,
-                                                    newData.GHWAndValidSeq[
+                                                    newData?.GHWAndValidSeq[
                                                         'Planogram Valid Sequence'
                                                     ].Yes
                                                 )}
@@ -442,19 +450,19 @@ function Dashboard() {
                                         <div className="ibox-content">
                                             <CommonPieChart
                                                 val={
-                                                    (newData.posmDetectedData.posmDetected || 0) +
-                                                    (newData.posmDetectedData.posmNotDetected || 0)
+                                                    (newData?.posmDetectedData.posmDetected || 0) +
+                                                    (newData?.posmDetectedData.posmNotDetected || 0)
                                                 }
                                                 totalWithTitle=" POSM Used"
-                                                positive={newData.posmDetectedData.posmDetected}
-                                                negative={newData.posmDetectedData.posmNotDetected}
+                                                positive={newData?.posmDetectedData.posmDetected}
+                                                negative={newData?.posmDetectedData.posmNotDetected}
                                                 posP={percentCalculate(
-                                                    newData.posmDetectedData.posmDetected,
-                                                    newData.posmDetectedData.posmNotDetected
+                                                    newData?.posmDetectedData.posmDetected,
+                                                    newData?.posmDetectedData.posmNotDetected
                                                 )}
                                                 negP={percentCalculate(
-                                                    newData.posmDetectedData.posmNotDetected,
-                                                    newData.posmDetectedData.posmDetected
+                                                    newData?.posmDetectedData.posmNotDetected,
+                                                    newData?.posmDetectedData.posmDetected
                                                 )}
                                                 posValueText="Yes"
                                                 negValueText="No"

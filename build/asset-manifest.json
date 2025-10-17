@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e61a60a.css",
-    "main.js": "/static/js/main.2642fafc.js",
+    "main.css": "/static/css/main.880fb98e.css",
+    "main.js": "/static/js/main.92ef772f.js",
     "static/media/header-bg.jpg": "/static/media/header-bg.2e176a5b6387360ecbf0.jpg",
     "static/media/body-bg.jpg": "/static/media/body-bg.bef2f15d4b126963509b.jpg",
     "static/media/logo.png": "/static/media/logo.6fe4d74df12f638b26a7.png",
     "static/media/Trade Gothic LT.ttf": "/static/media/Trade Gothic LT.9efed080cd3c208ee205.ttf",
     "static/media/Trade Gothic LT Bold.ttf": "/static/media/Trade Gothic LT Bold.b97b314b1be24e5559ff.ttf",
-    "index.html": "/index.html"
+    "index.html": "/index.html",
+    "main.880fb98e.css.map": "/static/css/main.880fb98e.css.map",
+    "main.92ef772f.js.map": "/static/js/main.92ef772f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e61a60a.css",
-    "static/js/main.2642fafc.js"
+    "static/css/main.880fb98e.css",
+    "static/js/main.92ef772f.js"
   ]
 }
