@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 🔧 Environment Setup
+## 🔧 Environment Setup 
 
 The app automatically uses the correct configuration based on environment:
 
